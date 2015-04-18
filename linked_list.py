@@ -13,7 +13,7 @@ class LinkedList():
     node = self.current
     self.current = self.current.next_node
     return node
-  
+
   def add(self, data):
     self.head = Node(data, self.head)
 
@@ -55,15 +55,10 @@ class LinkedList():
     while current:
       current.next_node, last_node, current = last_node, current, current.next_node
 
-    self.head = last_node  
+    self.head = last_node
 
 class Node():
   def __init__(self, data, next_node=None):
     self.data = data
     self.next_node = next_node
-
-linked = LinkedList()
-
-for i in range(20):
-  linked.add(i)
 
